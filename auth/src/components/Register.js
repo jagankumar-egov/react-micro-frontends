@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
-import { Button, CardContent } from "@material-ui/core";
 import Input from "./Input";
 import { CardFooter, TabTitle } from "./styled";
 import { Link } from "react-router-dom";
+import { Card } from "../App";
 
 const Register = () => {
   const onRegister = useCallback(() => {
@@ -11,24 +11,24 @@ const Register = () => {
 
   return (
     <>
-      <CardContent>
+      <Card>
         <TabTitle>Register page (route)</TabTitle>
         <Input label="Username" />
         <Input label="Password" />
         <Input label="Confirm Password" />
-      </CardContent>
+      </Card>
 
       <CardFooter>
         <Link to="/auth/login" style={{ textDecoration: "initial" }}>
-          <Button variant="outlined">Login</Button>
+          <button variant="outlined">Login</button>
         </Link>
-        <Button
+        <button
           variant="contained"
           onClick={onRegister}
           style={{ background: "#1db954" }}
         >
           Register
-        </Button>
+        </button>
       </CardFooter>
     </>
   );

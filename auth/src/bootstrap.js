@@ -5,7 +5,7 @@ import { createBrowserHistory } from "history";
 
 import App from "./App";
 
-const mount = (el: Element, { history, login }: AuthMountOptions) => {
+const mount = (el, { history, login }) => {
   ReactDOM.render(
     <Router history={history}>
       <App login={login} />
