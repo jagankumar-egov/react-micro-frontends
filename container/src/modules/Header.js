@@ -6,11 +6,8 @@ import { Observable } from "rxjs";
 export default ({
   isSignedIn$,
   logout,
-}: {
-  isSignedIn$: Observable<boolean>;
-  logout: VoidFunction;
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
   const { navigate } = useRouter();
 
   useEffect(() => {

@@ -4,17 +4,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    extensions: [ ".js", ".jsx"],
     modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.js?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["@babel/preset-react", "@babel/preset-typescript"],
+          presets: ["@babel/preset-react"],
         },
       },
     ],

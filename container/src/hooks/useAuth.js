@@ -3,16 +3,9 @@ import { useHistory } from "react-router-dom";
 import { History } from "history";
 import { BehaviorSubject, Observable } from "rxjs";
 
-interface UseAuthFunctions {
-  login: VoidFunction;
-  logout: VoidFunction;
-  history: History<unknown>;
-  isSignedIn$: Observable<boolean>;
-}
+const isSignedIn$ = new BehaviorSubject(false);
 
-const isSignedIn$ = new BehaviorSubject<boolean>(false);
-
-const useAuth = (): UseAuthFunctions => {
+const useAuth = () => {
   const history = useHistory();
 
   useEffect(() => {

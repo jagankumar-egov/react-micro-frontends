@@ -1,14 +1,11 @@
 import { useHistory } from "react-router-dom";
 import { useCallback } from "react";
 
-interface UseRouterFunctions {
-  navigate: NavigateFunction;
-}
 
-const useRouter = (): UseRouterFunctions => {
+const useRouter = () => {
   const history = useHistory();
 
-  const navigate = useCallback((route: string) => {
+  const navigate = useCallback((route) => {
     if (route !== history.location.pathname) {
       history.push(route);
     }
