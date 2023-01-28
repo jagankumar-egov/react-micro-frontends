@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy":"yarn build",
+    "deploy":"gh-pages -d dist",
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
+  "homepage": "http://jagankumar-egov.github.io/auth",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "@babel/core": "7.12.10",
     "@babel/preset-react": "7.12.10",
     "babel-loader": "8.2.2",
